@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="You_Are_Awesome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJJ-Gb-d9z">
+                                <rect key="frame" x="16" y="58" width="343" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="Ceu-XB-LnC"/>
+                                    <constraint firstAttribute="width" constant="343" id="RP0-hq-B3T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-Fl-IT3">
+                                <rect key="frame" x="16" y="181" width="100" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SxS-tf-eOU">
+                                <rect key="frame" x="124" y="172" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="078-S9-slQ"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c34-WB-AB4">
+                                <rect key="frame" x="246" y="166" width="104" height="30"/>
+                                <state key="normal" title="Show Message"/>
+                                <connections>
+                                    <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azu-ct-4yK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aDM-MN-D6s">
+                                <rect key="frame" x="16" y="250" width="343" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="hqx-3d-YcR"/>
+                                    <constraint firstAttribute="height" constant="218" id="vk5-nc-5my"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aDM-MN-D6s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5Jh-dc-PUe"/>
+                            <constraint firstItem="ntC-Fl-IT3" firstAttribute="top" secondItem="lJJ-Gb-d9z" secondAttribute="bottom" constant="17" id="7pr-9s-y47"/>
+                            <constraint firstItem="lJJ-Gb-d9z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="8hK-m5-2kv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aDM-MN-D6s" secondAttribute="trailing" constant="16" id="O3g-cz-PDE"/>
+                            <constraint firstItem="aDM-MN-D6s" firstAttribute="top" secondItem="c34-WB-AB4" secondAttribute="bottom" constant="54" id="Ttl-51-iwI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lJJ-Gb-d9z" secondAttribute="trailing" constant="16" id="afu-qG-CDT"/>
+                            <constraint firstItem="lJJ-Gb-d9z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dII-am-O5z"/>
+                            <constraint firstItem="ntC-Fl-IT3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="iTP-G0-Yc4"/>
+                            <constraint firstItem="c34-WB-AB4" firstAttribute="top" secondItem="lJJ-Gb-d9z" secondAttribute="bottom" constant="2" id="jsn-h2-rZx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c34-WB-AB4" secondAttribute="trailing" constant="25" id="mTJ-Zv-lCu"/>
+                            <constraint firstItem="SxS-tf-eOU" firstAttribute="leading" secondItem="ntC-Fl-IT3" secondAttribute="trailing" constant="8" id="moz-4f-a1l"/>
+                            <constraint firstItem="SxS-tf-eOU" firstAttribute="top" secondItem="lJJ-Gb-d9z" secondAttribute="bottom" constant="8" id="rnz-3M-NhP"/>
+                            <constraint firstItem="c34-WB-AB4" firstAttribute="top" secondItem="lJJ-Gb-d9z" secondAttribute="bottom" constant="2" id="sJC-fz-ej2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="awesomeImage" destination="aDM-MN-D6s" id="fpP-4h-v4p"/>
+                        <outlet property="messageLabel" destination="lJJ-Gb-d9z" id="8Lg-3Z-05n"/>
+                        <outlet property="soundSwitch" destination="SxS-tf-eOU" id="wBi-Ni-LOD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="281" y="147"/>
         </scene>
     </scenes>
 </document>
